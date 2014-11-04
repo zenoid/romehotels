@@ -261,7 +261,7 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
     var resizeEndTimeout;
 
     function setupResizeListener() {
-      window.addEventListener( 'resize', window, function() {
+      window.addEventListener( 'resize', function() {
         clearTimeout( resizeEndTimeout );
         resizeEndTimeout = setTimeout( resize, 500 );
       });

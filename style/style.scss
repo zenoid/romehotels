@@ -88,16 +88,17 @@ button {
   border: transparent;
   background-color: #FFF;
   @include borderRadius( 5px );
-  line-height: 40px;
-  padding: 0 1em;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  padding: 0 1em;
 
   span {
+    line-height: 20px;
+    padding: 8px 0;
     display: block;
 
-    &:first-child {
-      border-bottom: 1px solid lighten( $color-line, 10% );
+    &:nth-child(2) {
+      border-top: 1px solid lighten( $color-line, 10% );
     }
   }
 
@@ -119,9 +120,15 @@ button {
   margin: 0 20px;
   padding: 20px 0 10px 0;
   border-top: 1px solid $color-line;
+  @include flex;
 
   button {
     margin: 0 10px 10px 0;
+    @include flexbox;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
