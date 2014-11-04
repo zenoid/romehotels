@@ -250,7 +250,9 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
     }
 
     function setSelectedMetrics( btn ) {
-      document.querySelector( '.chart-metrics-btn' ).classList.remove( 'selected' );
+      Array.prototype.forEach.call( document.querySelectorAll( '.chart-metrics-btn' ), function( el, i ){
+        el.classList.remove( 'selected' );
+      });
       btn.classList.add( 'selected' );
     }
 
