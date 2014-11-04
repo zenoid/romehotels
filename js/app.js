@@ -20,7 +20,7 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
 
   // ----------------- Data Loading and Startup -----------------
 
-  $( document ).ready( function() {
+  document.addEventListener( 'DOMContentLoaded', function() {
 
     d3.csv( 'data/hotels.csv', function( data ) {
 

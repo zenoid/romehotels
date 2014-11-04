@@ -200,8 +200,8 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
 
         // Axis
 
-        chartXAxis.text( axisLabels[ xMetric ] );
-        chartYAxis.text( axisLabels[ yMetric ] );
+        chartXAxis.textContent = axisLabels[ xMetric ];
+        chartYAxis.textContent = axisLabels[ yMetric ];
 
     }
 
@@ -250,8 +250,8 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
     }
 
     function setSelectedMetrics( btn ) {
-      $( '.chart-metrics-btn' ).removeClass( 'selected' );
-      btn.addClass( 'selected' );
+      document.querySelector( '.chart-metrics-btn' ).classList.remove( 'selected' );
+      btn.classList.add( 'selected' );
     }
 
 
@@ -261,7 +261,7 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
     var resizeEndTimeout;
 
     function setupResizeListener() {
-      $( window ).on( 'resize', function() {
+      window.addEventListener( 'resize', window, function() {
         clearTimeout( resizeEndTimeout );
         resizeEndTimeout = setTimeout( resize, 500 );
       });
@@ -280,41 +280,41 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
 
       setup: function( d ) {
 
-        chartXAxis = $( '#chartXAxis' );
-        chartYAxis = $( '#chartYAxis' );
+        chartXAxis = document.querySelector( '#chartXAxis' );
+        chartYAxis = document.querySelector( '#chartYAxis' );
 
         data = d;
         createChart();
-        setSelectedMetrics( $( '#btnGDPStays' ) );
+        setSelectedMetrics( document.querySelector( '#btnGDPStays' ) );
         updateChart( 'stays', 'gdp_procapita' );
 
-        $( '#btnDistanceStars' ).bind( 'click', function() {
-          setSelectedMetrics( $( this ) );
+        document.querySelector( '#btnDistanceStars' ).addEventListener( 'click', function() {
+          setSelectedMetrics( this );
           updateChart( 'stars', 'distance' );
         });
 
-        $( '#btnDistanceStays' ).bind( 'click', function() {
-          setSelectedMetrics( $( this ) );
+        document.querySelector( '#btnDistanceStays' ).addEventListener( 'click', function() {
+          setSelectedMetrics( this );
           updateChart( 'stays', 'distance' );
         });
 
-        $( '#btnGDPStays' ).bind( 'click', function() {
-          setSelectedMetrics( $( this ) );
+        document.querySelector( '#btnGDPStays' ).addEventListener( 'click', function() {
+          setSelectedMetrics( this );
           updateChart( 'stays', 'gdp_procapita' );
         });
 
-        $( '#btnGiniStars' ).bind( 'click', function() {
-          setSelectedMetrics( $( this ) );
+        document.querySelector( '#btnGiniStars' ).addEventListener( 'click', function() {
+          setSelectedMetrics( this );
           updateChart( 'stars', 'gini' );
         });
 
-        $( '#btnSizes' ).bind( 'click', function() {
-          var btn = $( this );
-          if ( btn.hasClass( 'selected' ) ) {
-            btn.removeClass( 'selected' );
+        document.querySelector( '#btnSizes' ).addEventListener( 'click', function() {
+          var btn = this;
+          if ( btn.classList.contains( 'selected' ) ) {
+            btn.classList.remove( 'selected' );
             showSizes = false;
           } else {
-            btn.addClass( 'selected' );
+            btn.classList.add( 'selected' );
             showSizes = true;
           }
           updateChart();

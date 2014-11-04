@@ -13,7 +13,6 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'js/libs/d3.js',
-          'js/libs/jquery*.js',
           'js/classes/*.js',
           'js/app.js'
         ],
@@ -42,7 +41,6 @@ module.exports = function(grunt) {
       scripts: {
         files: [
           'js/libs/d3.js',
-          'js/libs/jquery*.js',
           'js/classes/*.js',
           'js/app.js'
         ],
