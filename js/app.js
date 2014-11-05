@@ -21,13 +21,7 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
   // ----------------- Utilities -----------------
 
   function fixTouchEvents() {
-
     FastClick.attach( document.body );
-
-    document.addEventListener( 'touchmove', function( e ) {
-      e.preventDefault();
-    });
-
   }
 
 
