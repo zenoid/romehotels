@@ -287,8 +287,8 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
 
         data = d;
         createChart();
-        setSelectedMetrics( document.querySelector( '#btnGDPStays' ) );
-        updateChart( 'stays', 'gdp_procapita' );
+        setSelectedMetrics( document.querySelector( '#btnDistanceStars' ) );
+        updateChart( 'stars', 'distance' );
 
         document.querySelector( '#btnDistanceStars' ).addEventListener( 'click', function() {
           setSelectedMetrics( this );
