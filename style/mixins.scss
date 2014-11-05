@@ -38,6 +38,12 @@
   flex: 1;
 }
 
+@mixin flexVertical {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
 
 
 /*                      FONTS AND TEXT
