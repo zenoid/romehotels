@@ -18,9 +18,25 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
 
 
 
+  // ----------------- Utilities -----------------
+
+  function fixTouchEvents() {
+
+    FastClick.attach( document.body );
+
+    document.addEventListener( 'touchmove', function( e ) {
+      e.preventDefault();
+    });
+
+  }
+
+
+
   // ----------------- Data Loading and Startup -----------------
 
   document.addEventListener( 'DOMContentLoaded', function() {
+
+    fixTouchEvents();
 
     d3.csv( 'data/hotels.csv', function( data ) {
 
