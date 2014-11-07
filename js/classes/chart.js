@@ -238,13 +238,13 @@ window.gitdRomeHotels = window.gitdRomeHotels || {};
     function formatNumber( n ) {
 
       if ( n < 1000 ) {
-        return '< 1.000';
+        return '< 1,000';
       } else if ( n < 5000 ) {
-        return ( Math.round( n / 100 ) / 10 ).toFixed( 1 ) + '00';
+        return ( Math.round( n / 100 ) / 10 ).toFixed( 1 ).replace( '.', ',' ) + '00';
       } else if ( n < 1000000 ) {
-        return Math.floor( n / 1000 ) + '.000';
+        return String( Math.floor( n / 1000 ) ).replace( '.', ',' ) + ',000';
       } else {
-        return ( Math.floor( n / 100000 ) / 10 ).toFixed( 1 ) + '00.000';
+        return ( Math.floor( n / 100000 ) / 10 ).toFixed( 1 ).replace( '.', ',' ) + '00,000';
       }
 
     }
