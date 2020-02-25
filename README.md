@@ -4,7 +4,7 @@ Hotel Preferences in Rome
 This is a scatterplot showing the top 40 nationalities of foreign travelers to Rome.
 Which hotel category do they choose? How long do they stay? Is there any correlation with the distance they travelled, the income equality or the income per capita in their country?
 
-It's part of the **Ghost in the Data** project: http://ghostinthedata.com/romehotels/
+It's part of the **Ghost in the Data** project: https://ghostinthedata.com/romehotels/
 
 ### Data Sources
 
